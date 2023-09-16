@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Notifications page</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!--dont awesome icon for red dot for unread notifications-->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="top">
+      <h1>Notifications</h1>
+      <div class="no-of-nots" id="numberOfNots">3</div>
+      <button id="markAllBtn">Mark all as read</button>
+    </div>
+    <div class="mid-btm">
+
+      <div data-not class="not not1 unread">
+        <div class="img-con">
+          <img src="assets/images/avatar-mark-webber.webp" alt="an image of a person">
+        </div>
+        <div class="text-not text-not1">
+          <div class="flex-row">
+            <p><strong>Mark Webber </strong>reacted to your recent post <span class="postname">My first tournament
+                today!</span>              <i data-red-dot class="fa-solid fa-circle"></i></p>
+          </div>
+          <div class="time">1m ago</div>
+        </div>
+      </div>
+
+      <div data-not class="not not2 unread">
+        <div class="img-con">
+          <img src="assets/images/avatar-angela-gray.webp" alt="an image of a person">
+        </div>
+        <div class="text-not text-not2">
+          <div class="flex-row">
+            <p><strong>Angela Gray </strong>followed you       <i data-red-dot class="fa-solid fa-circle"></i></p>
+          </div>
+          <div class="time">5m ago</div>
+        </div>
+      </div>
+
+      <div data-not class="not not3 unread">
+        <div class="img-con">
+          <img src="assets/images/avatar-jacob-thompson.webp" alt="an image of a person">
+        </div>
+        <div class="text-not text-not3">
+          <div class="flex-row">
+            <p><strong>Jacob Thompson </strong>has joined your group <span class="groupname">Chess Club</span>          <i data-red-dot class="fa-solid fa-circle"></i></p>
+          </div>
+          <div class="time">1day ago</div>
+        </div>
+      </div>
+
+      <div class="not not4">
+        <div class="img-con">
+          <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="an image of a person">
+        </div>
+        <div class="text-not text-not4">
+          <p><strong>Rizky Hasanuddin</strong>sent you a private message</p>
+          <div class="time">5days ago</div>
+          <div class="message">
+            <p>Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and
+              I'm already having lots of fun and improving my game.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="not not5">
+        <div class="img-con">
+          <img src="assets/images/avatar-kimberly-smith.webp" alt="an image of a person">
+        </div>
+        <div class="text-not text-not5">
+          <p><strong>Kimberly Smith </strong>commented on your picture</p>
+          <div class="time">1week ago</div>
+        </div>
+        <div class="img-con">
+          <img src="assets/images/image-chess.webp" alt="an image of a person playing chess">
+        </div>
+      </div>
+
+      <div class="not not6">
+        <div class="img-con">
+          <img src="assets/images/avatar-nathan-peterson.webp" alt="an image of a person">
+        </div>
+        <div class="text-not text-not6">
+          <p><strong>Nathan Peterson</strong> reacted to your recent post <span class="postname"> 5 end-game
+              strategies
+              to increase your win rate</span></p>
+          <div class="time">2 weeks ago</div>
+        </div>
+      </div>
+
+      <div class="not not7">
+        <div class="img-con">
+          <img src="assets/images/avatar-anna-kim.webp" alt="an image of a person">
+        </div>
+        <div class="text-not text-not7">
+          <p><strong>Anna Kim </strong>left the group <span class="groupname">Chess Club</span></p>
+          <div class="time">2 weeks ago</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
